@@ -52,7 +52,7 @@ public class Smelt extends Task<ClientContext> {
                 break;
             }
             case MITHRIL: {
-                componentId = Constants.ADAMANT_COMPONENT_ID;
+                componentId = Constants.MITHRIL_COMPONENT_ID;
                 break;
             }
             case ADAMANT: {

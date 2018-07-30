@@ -1,6 +1,6 @@
-package JP_AIO_Miner.Task;
+package IronMiner.Task;
 
-import JP_AIO_Miner.JP_AIO_Miner;
+import IronMiner.MineIron;
 import org.powerbot.script.Tile;
 import org.powerbot.script.rt4.ClientContext;
 import org.powerbot.script.rt4.Constants;
@@ -19,8 +19,7 @@ public class WalkToBank extends Task<ClientContext> {
 
     @Override
     public void execute() {
-        JP_AIO_Miner.state = "Walking to bank";
-        JP_AIO_Miner.printStatus("Walking To Bank");
+        MineIron.state = "Walking to bank";
         ctx.movement.findPath(new Tile(3013, 9718)).traverse();
     }
 }

@@ -1,10 +1,7 @@
 package VarrockWestSmither.Tasks;
 
 import VarrockWestSmither.Constants;
-import org.powerbot.script.Random;
-import org.powerbot.script.Tile;
 import org.powerbot.script.rt4.ClientContext;
-import org.powerbot.script.rt4.GameObject;
 
 public class WalkToBank extends Task<ClientContext>  {
 
@@ -21,8 +18,7 @@ public class WalkToBank extends Task<ClientContext>  {
 
     @Override
     public void execute() {
-        GameObject bankBooth = ctx.objects.select().name("Bank booth").nearest().poll();
-        ctx.movement.findPath(new Tile(bankBooth.tile().x() + Random.nextInt(-2, 2), bankBooth.tile().y() + Random.nextInt(-2, 2))).traverse();
+        ctx.movement.newTilePath(Constants.getTilePath()).traverse();
     }
 
     @Override

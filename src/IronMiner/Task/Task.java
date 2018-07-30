@@ -1,7 +1,8 @@
-package BlastFurnace.Tasks;
+package IronMiner.Task;
+
 
 import org.powerbot.script.ClientAccessor;
-import org.powerbot.script.rt4.ClientContext;
+import org.powerbot.script.ClientContext;
 
 public abstract class Task<C extends ClientContext> extends ClientAccessor<C> {
 
@@ -11,5 +12,4 @@ public abstract class Task<C extends ClientContext> extends ClientAccessor<C> {
 
     public abstract boolean activate();
     public abstract void execute();
-    public abstract String getName();
 }

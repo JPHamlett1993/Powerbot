@@ -1,16 +1,9 @@
 package VarrockWestSmither;
 
-import org.powerbot.script.Condition;
 import org.powerbot.script.rt4.ClientContext;
 import org.powerbot.script.Tile;
 
 public class Constants {
-
-    public static boolean isSmithing(ClientContext ctx) {
-        int amount = ctx.inventory.select().id(VarrockWestSmither.Constants.getBronzeBarId()).count();
-        Condition.sleep(2000);
-        return ctx.inventory.select().id(VarrockWestSmither.Constants.getBronzeBarId()).count() != amount;
-    }
 
 
     static int[][] path = {
@@ -26,9 +19,9 @@ public class Constants {
 
     static int anvilId = 2097;
     static int daggerMenuWidget = 312;
-    static int componentMenuId = 28;
-    static int bronzeBarId = 2359;
-    static int bronzeDaggerId = 9379;
+    static int componentMenuId = 2;
+    static int bronzeBarId = 2349;
+    static int bronzeDaggerId = 1205;
     static int hammerId = 2347;
 
     public static Tile getSmitherTile() {

@@ -1,6 +1,5 @@
 package AlKharidSmelter;
 
-import org.powerbot.script.Condition;
 import org.powerbot.script.rt4.ClientContext;
 import org.powerbot.script.Tile;
 
@@ -53,7 +52,7 @@ public class Constants {
     public static Ore[] SILVER_ORES = {new Ore(Constants.SILVER_ID, 28)};
     public static Ore[] STEEL_ORES = {new Ore(Constants.IRON_ID, 9), new Ore(Constants.COAL_ID, 18)};
     public static Ore[] GOLD_ORES = {new Ore(Constants.GOLD_ID, 28)};
-    public static Ore[] MITHRIL_ORES = {new Ore(Constants.MITHRIL_ID, 4), new Ore(Constants.COAL_ID, 16)};
+    public static Ore[] MITHRIL_ORES = {new Ore(Constants.MITHRIL_ID, 4), new Ore(Constants.COAL_ID, 18)};
     public static Ore[] ADAMANT_ORES = {new Ore(Constants.ADAMANT_ID, 3), new Ore(Constants.COAL_ID, 18)};
     public static Ore[] RUNE_ORES = {new Ore(Constants.RUNE_ID, 2), new Ore(Constants.COAL_ID, 16)};
 

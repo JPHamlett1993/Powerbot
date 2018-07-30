@@ -12,8 +12,6 @@ public class SmithDaggers extends Task<ClientContext> {
         super(ctx);
     }
 
-
-
     @Override
     public boolean activate() {
         return Constants.isMenuOpen(ctx);
@@ -21,13 +19,14 @@ public class SmithDaggers extends Task<ClientContext> {
 
     @Override
     public void execute() {
-        ctx.widgets.widget(Constants.getDaggerMenuWidget()).component(Constants.getComponentMenuId()).interact("All", "Mithril bolts");
+        ctx.widgets.widget(Constants.getDaggerMenuWidget()).component(Constants.getComponentMenuId()).interact("All");
         Condition.wait(new Callable<Boolean>() {
             @Override
             public Boolean call() throws Exception {
-                return ctx.widgets.widget(233).component(1).valid() || Constants.isSmithing(ctx);
+                return ctx.inventory.select().id(Constants.getBronzeBarId()).count() == 0
+                        || ctx.widgets.widget(233).component(1).valid();
             }
-        }, 100, 1000);
+        }, 100, 600);
     }
 
     @Override
